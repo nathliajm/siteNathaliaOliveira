@@ -1,0 +1,116 @@
+
+.lora {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 500px;
+    font-style: normal;
+  }
+  
+  body {
+      padding: 0;
+      margin: 0;
+      font-size: 1rem; 
+      font-style: italic; 
+      color: #1d0505; 
+      text-align: center; 
+  }
+  .principal {
+    background-color: rgb(196, 230, 250);
+    width: 80%; 
+    padding: 15px;
+    margin: 0 auto;
+    display: grid; 
+    gap: 5px;
+    grid-template-areas: "header section"
+                         "header section"
+                         "footer footer"
+}
+  header {
+      grid-area: header;
+      background-color:#4e7fac;
+      padding: 20px;
+      display: flex;
+      width: auto;
+      justify-content: space-between;
+      color: #ffffff;
+  
+  }
+  
+  nav ul{
+      margin:0 ;
+      padding:0;
+      list-style: none;
+      text-align: center;
+  
+  }
+  
+  nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+  
+  }
+  
+  nav ul li a{
+      color:antiquewhite;
+      text-decoration: none ;
+  
+  }
+  
+  
+  section {
+      grid-area: section;
+      background-color: #4e7fac;
+  
+  }
+  
+  footer {
+      grid-area: rodape;
+      display:flex ;
+      justify-content: space-evenly; 
+  }
+  
+  .secaof1, .secaof2 {
+      width: 25%;
+      background-color: #4269a3;
+  
+  }
+  
+  .secaof2{
+      width: 50%;
+      margin: 0 2px;
+  }
+  
+  @media(max-width:992px){
+      .principal{
+          grid-template-columns: 100%;
+          grid-template-areas: "cabecalho" "secao" "article" "rodape";
+          text-align: center;
+      }
+      footer{
+          display:flex;
+          text-align: center;
+          flex-wrap: wrap
+      }
+      .secaof1, .secaof2 {
+          margin: 0;
+          border: solid 1px #fff;
+          width: 49%;
+      }
+      .secaof2{
+          width: 100%;
+          order: -1;
+      }
+  
+  @media(max-width:768px){
+      body{
+          margin: 0 15px;
+      }
+      .principal, .secaof1, .secaof2 {
+          width: 100%;
+      }
+      .secaof2{
+          order: initial;
+      }
+  
+      }
+  }
